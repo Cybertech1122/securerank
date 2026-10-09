@@ -212,7 +212,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-brand-50/60 to-white">
+    <section className="relative overflow-hidden bg-white">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-2 lg:pt-16">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-600">The Global Cybersecurity Directory</p>
