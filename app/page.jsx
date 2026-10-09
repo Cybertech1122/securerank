@@ -1,6 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { HERO_GLOBE } from "./img/batch1";
+import { CITY_NEW_YORK, CITY_DALLAS } from "./img/batch2";
+import { CITY_LOS_ANGELES, CITY_CHICAGO, CITY_LONDON } from "./img/batch3";
+import { CITY_TORONTO, BLOG_TRENDS, BLOG_MDR } from "./img/batch4";
+import { BLOG_CLOUD } from "./img/batch5";
 
 /* ---------------- Icons (inline SVG) ---------------- */
 const I = {
@@ -75,12 +80,12 @@ const TRUSTED = ["Microsoft", "Google", "IBM", "aws", "CISCO", "Palo Alto Networ
 const TABS = ["Popular Cities", "United States", "Canada", "United Kingdom", "Europe", "Asia", "Middle East", "Australia"];
 
 const CITIES = [
-  { name: "New York", count: "520+ Companies", grad: "from-sky-400 via-blue-500 to-indigo-600" },
-  { name: "Dallas", count: "330+ Companies", grad: "from-amber-400 via-orange-500 to-rose-500" },
-  { name: "Los Angeles", count: "420+ Companies", grad: "from-rose-400 via-pink-500 to-purple-600" },
-  { name: "Chicago", count: "300+ Companies", grad: "from-indigo-400 via-blue-600 to-slate-700" },
-  { name: "London", count: "480+ Companies", grad: "from-slate-500 via-slate-600 to-slate-800" },
-  { name: "Toronto", count: "280+ Companies", grad: "from-cyan-400 via-sky-500 to-blue-600" },
+  { name: "New York", count: "520+ Companies", img: CITY_NEW_YORK },
+  { name: "Dallas", count: "330+ Companies", img: CITY_DALLAS },
+  { name: "Los Angeles", count: "420+ Companies", img: CITY_LOS_ANGELES },
+  { name: "Chicago", count: "300+ Companies", img: CITY_CHICAGO },
+  { name: "London", count: "480+ Companies", img: CITY_LONDON },
+  { name: "Toronto", count: "280+ Companies", img: CITY_TORONTO },
 ];
 
 const SERVICES = [
@@ -130,17 +135,17 @@ const STEPS = [
 
 const ARTICLES = [
   {
-    grad: "from-blue-600 via-indigo-600 to-slate-900", date: "October 8, 2026",
+    img: BLOG_TRENDS, date: "October 8, 2026",
     title: "Top Cybersecurity Trends for 2026",
     desc: "Explore the key cybersecurity trends shaping businesses in 2026 and beyond.",
   },
   {
-    grad: "from-slate-700 via-slate-800 to-slate-950", date: "October 5, 2026",
+    img: BLOG_MDR, date: "October 5, 2026",
     title: "How to Choose the Right MDR Provider",
     desc: "A complete guide to selecting the best managed detection and response provider for your business.",
   },
   {
-    grad: "from-cyan-600 via-blue-700 to-indigo-900", date: "October 2, 2026",
+    img: BLOG_CLOUD, date: "October 2, 2026",
     title: "Cloud Security Best Practices for Enterprises",
     desc: "Learn the essential cloud security practices to protect your data and infrastructure.",
   },
@@ -233,7 +238,7 @@ function Hero() {
         </div>
         <div className="relative mx-auto hidden w-full max-w-md lg:block">
           <div className="relative flex h-80 w-80 items-center justify-center rounded-full bg-gradient-to-br from-brand-100 via-brand-50 to-white shadow-inner">
-            <span className="text-brand-200">{I.globe("w-56 h-56")}</span>
+            <img src={HERO_GLOBE} alt="Global cybersecurity network" className="h-56 w-56 rounded-full object-cover" />
             <div className="absolute -left-6 top-8 rounded-2xl border border-slate-100 bg-white p-4 shadow-xl">
               <p className="text-xl font-extrabold text-slate-900">15,000+</p>
               <p className="text-xs text-slate-500">Cybersecurity Companies<br />Worldwide</p>
@@ -312,9 +317,7 @@ function BrowseByLocation() {
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {CITIES.map((c) => (
             <a key={c.name} href="#" className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/60 transition hover:shadow-md">
-              <div className={`flex h-28 items-end bg-gradient-to-br ${c.grad} p-3`}>
-                <span className="text-4xl font-black text-white/30">{c.name[0]}</span>
-              </div>
+              <img src={c.img} alt={c.name} className="h-28 w-full object-cover" />
               <div className="flex items-center justify-between p-3">
                 <div>
                   <p className="text-sm font-bold text-slate-900">{c.name}</p>
@@ -471,9 +474,7 @@ function Insights() {
         <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
           {ARTICLES.map((a) => (
             <article key={a.title} className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition hover:shadow-md">
-              <div className={`flex h-44 items-center justify-center bg-gradient-to-br ${a.grad}`}>
-                <span className="text-white/40">{I.shield("w-16 h-16")}</span>
-              </div>
+              <img src={a.img} alt={a.title} className="h-44 w-full object-cover" />
               <div className="p-5">
                 <p className="text-xs text-slate-400">{a.date}</p>
                 <h3 className="mt-1 text-base font-extrabold leading-snug text-slate-900">{a.title}</h3>
