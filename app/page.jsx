@@ -213,7 +213,7 @@ function Navbar() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-2 lg:pt-16">
+      <div className="mx-auto grid max-w-7xl items-center gap-6 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:pt-16">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-600">The Global Cybersecurity Directory</p>
           <h1 className="mt-3 text-4xl font-extrabold leading-[1.12] tracking-tight text-slate-900 sm:text-5xl">
@@ -241,23 +241,27 @@ function Hero() {
             ))}
           </p>
         </div>
-        <div className="relative mx-auto hidden w-full max-w-xl lg:block">
-          <img src={HERO_GLOBE} alt="Global cybersecurity network" className="mx-auto w-full max-w-[34rem]" />
-          <div className="absolute right-0 top-4 flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
+        <div className="relative hidden min-h-[32rem] lg:block">
+          <img
+            src={HERO_GLOBE}
+            alt="Global cybersecurity network"
+            className="absolute -top-14 left-0 w-[40rem] max-w-none [mask-image:radial-gradient(ellipse_72%_72%_at_50%_45%,black_55%,transparent_98%)]"
+          />
+          <div className="absolute right-0 top-0 flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">{I.building()}</span>
             <div>
               <p className="text-xl font-extrabold leading-none text-slate-900">15,000+</p>
               <p className="mt-1 text-xs leading-tight text-slate-500">Cybersecurity Companies<br />Worldwide</p>
             </div>
           </div>
-          <div className="absolute right-8 top-[42%] flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
+          <div className="absolute right-10 top-[38%] flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">{I.globe()}</span>
             <div>
               <p className="text-xl font-extrabold leading-none text-slate-900">100+</p>
               <p className="mt-1 text-xs leading-tight text-slate-500">Countries Covered</p>
             </div>
           </div>
-          <div className="absolute bottom-10 right-0 flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
+          <div className="absolute bottom-4 right-0 flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">{I.shield()}</span>
             <div>
               <p className="text-xl font-extrabold leading-none text-slate-900">50+</p>
