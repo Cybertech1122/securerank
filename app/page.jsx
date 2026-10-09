@@ -1,11 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { HERO_GLOBE } from "./img/batch1";
-import { CITY_NEW_YORK, CITY_DALLAS } from "./img/batch2";
-import { CITY_LOS_ANGELES, CITY_CHICAGO, CITY_LONDON } from "./img/batch3";
-import { CITY_TORONTO, BLOG_TRENDS, BLOG_MDR } from "./img/batch4";
-import { BLOG_CLOUD } from "./img/batch5";
+const HERO_GLOBE = "https://dmmcy0pwk6bqi.cloudfront.net/268be1dab2c63e006cd3fa085eb8b95c60116367";
+const CITY_NEW_YORK = "https://dmmcy0pwk6bqi.cloudfront.net/39d204a25987023faf29fd594e73e163c8c40324";
+const CITY_DALLAS = "https://dmmcy0pwk6bqi.cloudfront.net/7d4cc3316ba5b5201cdfbec7f6f581f7b6e5f336";
+const CITY_LOS_ANGELES = "https://dmmcy0pwk6bqi.cloudfront.net/30382fba191b24dcb65bf8b5833fe0025b5a7705";
+const CITY_CHICAGO = "https://dmmcy0pwk6bqi.cloudfront.net/9f5cb81a6b4465db7af7396219e9b90a62895b83";
+const CITY_LONDON = "https://dmmcy0pwk6bqi.cloudfront.net/d80d7d7196a680ba5ad165cfc148a3ed7c425701";
+const CITY_TORONTO = "https://dmmcy0pwk6bqi.cloudfront.net/abb98f84fd46996a1899714627acafc1b0c3c6ea";
+const BLOG_TRENDS = "https://dmmcy0pwk6bqi.cloudfront.net/b6275aedf5e5bda15a4b8ddca958bbda4e93c16e";
+const BLOG_MDR = "https://dmmcy0pwk6bqi.cloudfront.net/a522dd15d80533744b0f9081b5d7a0d0546ca819";
+const BLOG_CLOUD = "https://dmmcy0pwk6bqi.cloudfront.net/801176e6607be3388edffeea6be11faa121e765e";
 
 /* ---------------- Icons (inline SVG) ---------------- */
 const I = {
