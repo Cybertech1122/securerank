@@ -236,25 +236,32 @@ function Hero() {
           </form>
           <p className="mt-4 text-xs text-slate-500">
             <span className="font-semibold text-slate-600">Popular Searches:</span>{" "}
-            {["Cybersecurity Companies in Dallas", "Penetration Testing Providers", "MDR Companies", "Cloud Security"].map((s, i) => (
-              <span key={s}><a href="#" className="text-brand-600 hover:underline">{s}</a>{i < 3 && <span className="mx-1.5 text-slate-300">|</span>}</span>
+            {["Cybersecurity Companies in Dallas", "Penetration Testing Providers", "MDR Companies", "Cloud Security"].map((s) => (
+              <a key={s} href="#" className="mr-4 text-brand-600 hover:underline">{s}</a>
             ))}
           </p>
         </div>
-        <div className="relative mx-auto hidden w-full max-w-md lg:block">
-          <div className="relative flex h-80 w-80 items-center justify-center rounded-full bg-gradient-to-br from-brand-100 via-brand-50 to-white shadow-inner">
-            <img src={HERO_GLOBE} alt="Global cybersecurity network" className="h-56 w-56 rounded-full object-cover" />
-            <div className="absolute -left-6 top-8 rounded-2xl border border-slate-100 bg-white p-4 shadow-xl">
-              <p className="text-xl font-extrabold text-slate-900">15,000+</p>
-              <p className="text-xs text-slate-500">Cybersecurity Companies<br />Worldwide</p>
+        <div className="relative mx-auto hidden w-full max-w-xl lg:block">
+          <img src={HERO_GLOBE} alt="Global cybersecurity network" className="mx-auto w-full max-w-[34rem]" />
+          <div className="absolute right-0 top-4 flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">{I.building()}</span>
+            <div>
+              <p className="text-xl font-extrabold leading-none text-slate-900">15,000+</p>
+              <p className="mt-1 text-xs leading-tight text-slate-500">Cybersecurity Companies<br />Worldwide</p>
             </div>
-            <div className="absolute -right-4 top-1/3 rounded-2xl border border-slate-100 bg-white p-4 shadow-xl">
-              <p className="text-xl font-extrabold text-slate-900">100+</p>
-              <p className="text-xs text-slate-500">Countries Covered</p>
+          </div>
+          <div className="absolute right-8 top-[42%] flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">{I.globe()}</span>
+            <div>
+              <p className="text-xl font-extrabold leading-none text-slate-900">100+</p>
+              <p className="mt-1 text-xs leading-tight text-slate-500">Countries Covered</p>
             </div>
-            <div className="absolute bottom-6 left-10 rounded-2xl border border-slate-100 bg-white p-4 shadow-xl">
-              <p className="text-xl font-extrabold text-slate-900">50+</p>
-              <p className="text-xs text-slate-500">Security Services</p>
+          </div>
+          <div className="absolute bottom-10 right-0 flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-xl">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">{I.shield()}</span>
+            <div>
+              <p className="text-xl font-extrabold leading-none text-slate-900">50+</p>
+              <p className="mt-1 text-xs leading-tight text-slate-500">Security Services</p>
             </div>
           </div>
         </div>
